@@ -2,7 +2,7 @@ module.exports = {
   config: {
     name: "pending",
     version: "1.0",
-    author: "لوفي",
+    author: "Meera Rajput",
     countDown: 5,
     role: 2,
     shortDescription: {
@@ -47,7 +47,7 @@ onReply: async function({ api, event, Reply, getLang, commandName, prefix }) {
         const index = body.split(/\s+/);
         for (const singleIndex of index) {
             if (isNaN(singleIndex) || singleIndex <= 0 || singleIndex > Reply.pending.length) return api.sendMessage(getLang("invaildNumber", singleIndex), threadID, messageID);
-            api.sendMessage(`•تم توصيل يوكي بنجاح 🫂🤍:\n\n•إنضموا إلى هنا لمعرفة للمزيد عن البوت:\nhttps://facebook.com/groups/235038219450134/\n\n•أكتب ${prefix}دخول لدخول مجموعة المسنجر 🙂🤍\n\n•أكتب ${prefix}الاوامر لعرض أوامر البوت🫂🌝🤍`, Reply.pending[singleIndex - 1].threadID);
+            api.sendMessage(`𝗦𝗧𝗥𝗔𝗪𝗕𝗘𝗥𝗥𝗬 ❤️🍓 𝗕𝗢𝗧 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗦𝗙𝗨𝗟𝗟𝗬🤍:\n\n•My Owner Meera Rajput:\nhttps://www.facebook.com/The.Meera.X\n\n•My Prefix ${prefix}𝙴𝙽𝙹𝙾𝚈 𝚃𝙷𝙴 𝙱𝙾𝚃 ❤️🤍\n\n•ᗷO᙭ ᑕᕼᗩT ᑭᖇEᖴI᙭ ${prefix}𝙵𝙾𝚁 𝙰𝙽𝚈 𝙷𝙴𝙻𝙿 𝙰𝙱𝙾𝚄𝚃 𝙱𝙾𝚃 𝙲𝙾𝙽𝚃𝙰𝙲𝚃 𝙼𝚈 𝙾𝚆𝙽𝙴𝚁 ❤️😺🤍`, Reply.pending[singleIndex - 1].threadID);
             count+=1;
         }
         return api.sendMessage(getLang("approveSuccess", count), threadID, messageID);
